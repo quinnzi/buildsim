@@ -12,17 +12,27 @@
 <body>
 </head>
 <style>
+img{
+    transition: transform 2 linear;
+}
     body{
-        background-color: rgba(232, 238, 232, 0.637);
+        background-color: rgba(232, 238, 232, 0.459);
+    }
+    img:active{
+     transform: scale(1.2)
     }
     section{
        
         border-radius: 20px; 
-        border: rgba(136, 156, 136, 0.925) groove 4px; 
+        border: rgba(136, 156, 136, 0.712) groove 5px; 
         margin: 1rem;
         min-height: 70vh;
-        width: 90%;
+        width: 85%;
         align-self: center;
+    }
+    section:hover{
+       
+border: rgba(109, 136, 109, 0.781) dashed 5px; 
     }
     p, ul{
         font-family: montserrat; font-size: 1.3rem; margin: 3.5rem;
@@ -31,6 +41,9 @@
     h2{
          font-family: Crimson Text; font-size: 3.5rem; margin: 2.5rem;
          text-align: center;
+    }
+    #s1, #s2, #s3, #s4, #s5{
+        display: none;
     }
 </style>
 <body style="display: flex; flex-direction: column; width: 100%; ">
@@ -41,19 +54,23 @@
    
 </header>
 <div style="width: 100%; background-color: rgb(50, 77, 51);"></div>
+           <img src="right.png" width="100rem" style="margin: 3rem; position: absolute; left: 0; top: 5rem;" onclick="slide(-1)">
+   
+        <img src="right.webp" width="100rem" style="margin: 3rem; position: absolute; right: 0; top: 5rem;" onclick="slide(1)">
 
-
-<section id="introduction">
+<section id="s1">
    <div style="display: flex; flex-direction: column; align-items: center;">
- <div id="title-con" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%; border-radius: 20px; border: black groove 4px; background-color: rgb(155, 192, 173); padding: 0; text-align: center;" >
-        <h1 style="font-family: Texturina; color: rgb(31, 31, 31); font-size: 4rem; padding: 0;">The Unlimited Potential of Potential Energy</h1>
-        
-        
+ <div id="title-con" style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 80%; padding: 0; text-align: center; " >
+
+    <h1 style="font-family: Texturina; color: rgb(31, 31, 31); font-size: 4rem; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%; border-radius: 20px; border: black groove 4px; background-color: rgb(155, 192, 173); padding: 0; text-align: center;">The Unlimited Potential of Potential Energy</h1>
+       
        </div>
 
        <p>
 Potential energy is everywhere in our lives. When your fingers hover above your keyboard, they
- have potential energy. The spring in your ballpoint pen has potential energy. Your electrical appliances have potential energy. When you cook a delicious dish on the stove, you are using the potential energy of your ingredients!
+ have potential energy. The spring in your ballpoint pen has potential energy. 
+ The atoms that make up your body have potential enrgy.
+  When you cook a delicious dish on the stove, you are using the potential energy of your ingredients!
  This is fine and dandy and all, but what is potential energy and how does it work? We're going to go through the different 
  types of potential energy today and tell you! But in general, 
  you should know that potential energy is stored energy--energy that has the POTENTIAL to become energy that affects the physical world. 
@@ -63,30 +80,34 @@ Potential energy is everywhere in our lives. When your fingers hover above your 
 </section>
 
 
-<section id="gravitational-potential-energy">
+<section id="s2">
    <div style="display:flex; width: 100%;">
     <div style="width: 70%;">
     <h2>Lets drop a bowling ball!</h2>
+    <p>Current Potential Energy of the <input id="weight" value="11" style="font-size: 1.3rem; width: 3rem;" type="number"> kg Ball:<p id="eq" style="display: inline; margin-top: 0; font-size: 2rem; line-height: 1.2; background-color: rgba(201, 240, 201, 0.795); padding: 2.5rem; border-radius: 20px;"> 1942.38 Joules</p></p>
        <p>
           What if one day you woke up and asked yourself questions such as: From what height will a bowling ball dropped on a desk break said desk?
-          Exactly how heavy should our bowling ball be (there are 5 pound bowling balls out there!).  
-          These questions deal with a little something called GRAVITATIONAL potential energy.   
-          he energy a ball has because its it
-           the air. That's why its potential!  
+          Exactly how heavy should our bowling ball be? (there are 5 pound bowling balls out there!).  
+          These questions deal with a little something called GRAVITATIONAL potential energy--  
+          the energy a ball has because its it
+           the air. That's why it's called potential!  
 
 
         <p>
-          Quick Question---have you ever dropped a glass before? chances are that you have, 
-          and chances are that if it dropped onto the floor--glass broke. 
+          Quick Question---have you ever dropped a glass before? Chances are that you have, 
+          and chances are that if it dropped onto the floor--the glass broke. 
           Do you think that if you had been crouched on the floor and held the glass 
           only a millimEter above the floor that it would have shattered?? No! It would not have. That's because 
-          the higher a glass is, the higher its gravitational potential energy is. 
+          the higher a glass is, the higher its gravitational potential energy is. For the glass to not break, the ground has to absorb a certain amount of energy. 
+          There's a limit to how much energy every object can absorb and when the ground doesn't absorb a sufficient amount, the glass breaks! 
+          The higher the gravitational potential energy, the less likely the ground will be able to absorb enough to not break the glass.
         </p>
 
           <p>
-            Now let's make an assumption about what will happen to the desk if we drop a 1000 pound ball onto it? It would likely 
+            Now let's make an assumption about what will happen to a desk if we drop a 1000 pound ball onto it? 
+            It would likely 
             be crushed instantly, right? Because heavier things exert a greater force.
-             Now let's take a look at the potential enrgy formula so w can see why this is.
+             Now let's take a look at the potential energy formula so w can see why this is.
           </p>
         <p style="font-weight: bold; font-size: 2rem;">
         Gravitational potential energy is measured (in Joules) with the formula:
@@ -98,30 +119,35 @@ Potential energy is everywhere in our lives. When your fingers hover above your 
             <li>h is how high the object is</li>
         </ul> 
 
-        <p>You can see from this formula why height increases potential 
+        <p>You can see from this formula why height increases potential energy
             and why a heavier object 
-            eaves more of an impact 
-            when fropped rather than one with less mass. 
+            leaves more of an impact 
+            when dropped rather than a lighter object (or just one with less mass). 
             The moment we actually drop the object with this potential energy, the PE turns into a KE
             (The potential energy calculated is changed to the kinetic energy of the object).
+            Use the up and down arrow keys to see how our ball's potential energy changes with height! Each line represents a meter.
         </p>
 
        </p>
 </div>
         <div style="background-image: url('graph.jpg'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;">
-           <img src="ball.png" width="100vw" style="position: absolute; top: 82.5rem;" id="ball">
+           <img src="ball.png" width="100vw" id="ball" style="position: relative; ">
         </div>
 
    </div>
 </section>
 
 
-<section id="elastic-potential-energy">
+<section id="s3">
    <div style="display:flex; width: 100%;">
     <div style="width: 70%;">
-    <h2>Stretch rubber bands thin</h2>
+    <h2>Springs, the pinnacle of potential</h2>
        <p>
-         The odds are that you have probably stretched a rubber band in your life. What happened if you let the rubber band go after stretching it? It returned back to its original shape. Elastic potential energy is the energy that things have when they are stretched or compressed away from their original shape. The farther you stretch a rubber band, the higher its elastic potential energy. Stretch the rubber band over to the left and give it a try! The formula for elastic potential energy is:
+        The odds are that you have probably stretched a rubber band in your life. 
+        What happened if you let the rubber band go after stretching it? It returned back to its original shape. 
+        Elastic potential energy is the energy that things have when they are stretched or compressed away from their original shape. 
+        The farther you stretch a rubber band, the higher its elastic potential energy. Springs have potential energy as well when they are stretched and compressed.
+        The formula for elastic potential energy is:
 
         <p>
 
@@ -138,7 +164,7 @@ Potential energy is everywhere in our lives. When your fingers hover above your 
 
        </p>
 </div>
-        <div style="background-image: url('graph.jpg'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;">
+        <div style="background-image: url('springAlone.gif'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;">
     
         </div>
 
@@ -148,130 +174,154 @@ Potential energy is everywhere in our lives. When your fingers hover above your 
 
 
 
-<section id="electrical-potential-energy">
+<section id="s4">
    <div style="display:flex; width: 100%;">
     <div style="width: 70%;">
     <h2>Electrons certainly have untapped potential :)</h2>
        <p>
-        If your car uses gasoline, there is a pretty high chance that it uses an internal combustion engine. How does this rel
+        When we think about electrons, we typically think about electricity.
+         But all atoms have electrical potential energy because they contain charged particles (protons and electrons). Electrical potential energy 
+         is simply the energy stored because of their position relative to other charged objects.
+          We know that positive is attacted to negative and negative is attracted to positive, right? 
+
+
+
 
         <p>
+            <p>          Well let's think about magnets for a second. If you put a magnet near another magnet, it will either repel or attract the magnet right? 
+          Before it does either, it has potential enrgy because it has the potential to attract or repel that magnet. Similarly, atoms if you have two electric charges, 
+          they will either attract or repel each other. To move them closer if they repel, or pull them apart if they attract,
+           you have to do work. This work is stored as electric potential energy.</p>
 
         <p style="font-weight: bold; font-size: 2rem;">
-        Elastic potential energy is measured (in Joules) with the formula:
+        Electric potential energy is measured (in Joules) with the formula:
+        
         </p> 
-        <p style="font-weight: bold; font-size: 1.5rem;"> <b>EPE = kx^2/2 </b> </p>
+        <p style="font-weight: bold; font-size: 1.5rem;"> <b>EPE = k* q1 * q2/r </b> </p>
         <ul>
-            <li>k is the objects spring constant. The spring constant is the amount of force needed to compress the object (typically by a meter)</li>
-            <li>x is how far the object is stretched from its original position</li>
+            <li>k is Coloumbs constant. In the simplest possible terms, it is what determines the strength of the electrostatic force between two point charges</li>
+            <li>q1 and q2 are the magnitudes of these point charges</li>
+            <li>r is the distance between the charges</li>
         </ul> 
 
 
 
        </p>
+       <img src="R.gif" width="80%" style="align-self: center;"></img>
 </div>
-        <div style="background-image: url('graph.jpg'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;">
+        <div style="background-image: url('mm.png'); background-repeat: no-repeat; background-size: contain; width: 30%; min-height: 100vh;">
       
         </div>
 
    </div>
+
 </section>
 
-<section id="chemical-potential-energy">
+<section id="s5">
    <div style="display:flex; width: 100%;">
     <div style="width: 70%;">
     <h2>Combustion Engines are Cool!</h2>
        <p>
-        If your car uses gasoline, there is a pretty high chance that it uses an internal combustion engine. Gasoline has chemical potential energy. This is energy contained in the bonds of atoms that is released when they react with something and break those bonds. Gasoline has enough potential energy to push down a piston when it goes through combustion. 
-
+        If your car uses gasoline, there is a pretty high chance that it uses an internal combustion engine. 
+        Gasoline has chemical potential energy. This is energy contained in the bonds of atoms that is released 
+        when they react with something and break those bonds.
+        When you see the piston in an engine pushed down, that is the result of a release of potential energy.
         <p>
         <p>
-      There's no easy way to show this in action, so we'll just go ahead and show you how a combustion engine works with the diagram to the left. Every time the piston is pushed down, that is the result of potential energy in gasoline being converted to kinetic energy. There's really no single formula to calculate chemical potential enrgy, as that depends on some complicated thermodynamics stuff that we will not get into. You now know that the potential energy of most flammable substances is b       <p>
-
-        <p style="font-weight: bold; font-size: 2rem;">
-        Elastic potential energy is measured (in Joules) with the formula:
-        </p> 
-        <p style="font-weight: bold; font-size: 1.5rem;"> <b>EPE = kx^2/2 </b> </p>
-        <ul>
-            <li>k is the objects spring constant. The spring constant is the amount of force needed to compress the object (typically by a meter)</li>
-            <li>x is how far the object is stretched from its original position</li>
-        </ul> 
+      There's no easy way to show this in action, so we'll just go ahead and show you 
+      how a combustion engine works with the diagram to the left. 
+      Every time the piston is pushed down, that is the result of potential energy 
+      in gasoline being converted to kinetic energy. There's really no single formula 
+      to calculate chemical potential enrgy, as that depends on some complicated thermodynamics 
+      stuff that we will not get into. But you can click the image to see the result of this chemical potential energy!<p>
 
 
 
-       </p>
+
 </div>
-        <div style="background-image: url('graph.jpg'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;">
+        <div id="engine"  style="background-image: url('Screenshot\ 2026-11-22\ 150602.png'); background-repeat: no-repeat; background-size: cover; width: 30%; min-height: 100vh;  " onclick="c()">
          
         </div>
 
    </div>
 </section>
 
-Objects with an electric charge can also have potential energy. This is called electric potential energy. It's the energy stored because of their position relative to other charged objects.
-
-If you have two electric charges, they will either attract or repel each other. To move them closer if they repel, or pull them apart if they attract, you have to do work. This work is stored as electric potential energy.
-
-The formula for the electric potential energy between two charges Q and q separated by a distance r is:
-
-U is the electric potential energy.
-Q and q are the amounts of the two electric charges.
-r is the distance between the charges.
-ε0 is a constant called the vacuum permittivity.
 
 
-Magnets also have potential energy, called magnetic potential energy. This energy depends on how far apart magnets are and how they are lined up. For example, a compass needle has the lowest magnetic potential energy when it points north, aligning with Earth's magnetic field. If you push it away, it will try to snap back into alignment.
 
-If you try to push two like poles of magnets together (north-north or south-south), you feel a strong push. The energy you use to force them together is stored as magnetic potential energy. When you let go, they spring apart, and this stored energy turns into motion.
-
-git add
 </body>
 <script>
-let changeY = 0
-dragElement(document.getElementById("ball"));
+function c() {
+    document.getElementById("engine").style.backgroundImage = "url('torque_motor.gif')"
+}
+let ballP = 0
+let gravity = 9.81
+let toMeters = ballP / 6
+let height = 110/6 - toMeters
+document.getElementById("weight").addEventListener('change', ()=>{
+    const weight = document.getElementById("weight").value
+    document.getElementById("eq").textContent = `${gravity * weight * height} Joules`
+})
+let currentSlide = 1
 
-function dragElement(elmnt) {
+
+document.addEventListener('keydown', (e)=>{
+    event.preventDefault()
+    if(currentSlide != 2){
+        return
+    }
+    else{
+        moveBall(e.code)
+    }
     
+})
+function moveBall(code){
 
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-console.log(`positionone ${pos1} positiontwo ${pos2} positionthree ${pos3} positionfour ${pos4}`)
-    elmnt.onmousedown = dragMouseDown;
-  
-
-  function dragMouseDown(e) {
-console.log(`positionone ${pos1} positiontwo ${pos2} positionthree ${pos3} positionfour ${pos4}`)
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-      console.log(`positionone ${pos1} positiontwo ${pos2} positionthree ${pos3} positionfour ${pos4}`)
+  if(code === "ArrowDown")  {
+  if(ballP === 110){
+          document.getElementById("ball").style.top =  ballP + "rem"
+          return
+    }
+    ballP++
+    document.getElementById("ball").style.top =  ballP + "rem"
+    console.log(ballP + "rem")
   }
-
-  function elementDrag(e) {
-    console.log(`positionone ${pos1} positiontwo ${pos2} positionthree ${pos3} positionfour ${pos4}`)
-    e = e || window.event;
-    e.preventDefault();
-
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      console.log(e.clientY)
-       console.log( elmnt.style.top)
+    if(code ==="ArrowUp")  {
+    if(ballP === 0){
+          document.getElementById("ball").style.top =  ballP + "rem"
+          return
+    }
+    ballP--
+    document.getElementById("ball").style.top =  ballP + "rem"
 
   }
+  const weight = document.getElementById("weight").value
+gravity = 9.81
+toMeters = ballP / 6
+height = 110/6 - toMeters
+document.getElementById("eq").textContent = `${gravity * weight * height} Joules`
 
-  function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+
+}
+document.getElementById(`s${currentSlide}`).style.display = "flex"
+function slide(factor){
+    currentSlide = currentSlide + factor
+    if (currentSlide > 5){
+    currentSlide = 1
+    document.getElementById(`s${currentSlide}`).style.display = "flex"
+     document.getElementById(`s${5}`).style.display = "none"
+    return
+    }
+    if (currentSlide < 1){
+    currentSlide = 5
+     document.getElementById(`s${1}`).style.display = "none"
+    document.getElementById(`s${currentSlide}`).style.display = "flex"
+    return
+    }
+    document.getElementById(`s${currentSlide}`).style.display = "flex"
+    console.log(currentSlide)
+    document.getElementById(`s${currentSlide - 1}`).style.display = "none"
+    
 }
 
 </script>
